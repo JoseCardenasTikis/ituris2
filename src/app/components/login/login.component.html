@@ -1,0 +1,36 @@
+<div class="body">
+
+    <div class="login">
+
+        <form  [formGroup]="loginUsuario"   (ngSubmit)="ingresar()">
+
+        <img src="../../../assets/img/user2.png"  width="40%"    alt="">
+        <h1> Login </h1>
+
+        <mat-form-field class="ancho" appearance="fill">
+            <mat-label>Email</mat-label>
+            <input type="email"     autocomplete="off" matInput  formControlName="userEmail">
+          </mat-form-field>
+
+          <mat-form-field class="ancho" appearance="fill">
+            <mat-label>Contraseña</mat-label>
+            <input  type="password"    autocomplete="off" matInput formControlName="password">
+          </mat-form-field>
+          <br>
+
+          <button type="submit" mat-raised-button class="ancho boton"  [disabled]="loginUsuario.invalid"  color="primary">Ingresar</button>
+               
+           <br>
+          <br>
+        <p> No tienes cuenta? <a routerLink="/registrar-usuario" href="">Registrar</a></p>
+        <br>
+        <br>
+        <a routerLink="/recuperar-password" href="">Recuperar Contraseña</a>
+      </form>
+
+    </div>
+
+    
+
+
+</div>
